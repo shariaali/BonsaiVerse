@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+	  <!-- These are meta tags for search engine optimization-->
+    <meta charset="utf-8">
+    <meta name="description" content="Best place to buy bonsai plants.">
+    <meta name="keywords" content="Bonsai, Plants, E-commerce, store, online store, plants">
+    <meta name="author" content="Sharia Ali, Abinash Yadav, Anugya Shah, Nikant Gharti Magar, Utsav Rai">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonsaiVerse</title>
+    <!-- linking external css that includes styles for header and footer -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- in-line css was used to style some unique and specific components of the home page -->
+    <!-- This is a link to view favicon in browsers tab  -->
+    <link rel="icon" href="icons/favicon.png">
+     <!-- internal css for styling common components of the home page -->
+    <style type="text/css">
+        /* "*" is a universal selector that targets entire body of web page */
+        * {
+          margin: 0px auto;
+        }
+
+        /* height of wrapper div */
+        .maindiv {
+          height: auto;
+        }
+
+        /* styling searchbar in header */
+        .search {
+          border-radius: 25px 25px;
+          color: #004921;
+          font-size: 20px;
+          font-weight: 100;
+          padding: 10px;
+          background-color: #ffffff;
+          text-decoration: none;
+          display: inline-block;
+          cursor: auto;
+          text-align: center;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          margin-left: 280px;
+        }
+
+        /* styling the sliding images */
+        .slidingimg {
+          display: none;
+          margin-right: 0px;
+        }
+
+        /* width & margin of slideshow container */
+        .slideshow-container {
+          max-width: auto;
+          margin: auto;
+        }
+
+        /* fading animation of slideshow images */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        /* making animation efficient */
+        @keyframes fade {
+          from {
+            opacity: .4
+          }
+
+          to {
+            opacity: 1
+          }
+        }
+
+        /* styling the button */
+        .button {
+          border-radius: 25px 25px;
+          color: #ffffff;
+          background-color: #FACE4D;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          padding: 15px;
+          position: relative;
+          top: 80px;
+          left: 100px;
+        }
+
+        /* styling products row */
+        .row {
+          display: block;
+          float: right;
+          margin-right: 50px;
+        }
+
+        /* styling the box that has the products in it */
+        .buybonsai {
+          background-color: #8aa895;
+          float: right;
+          height: 390px;
+          width: 300px;
+          margin-right: 30px;
+          margin-top: 40px;
+          border-radius: 5px;
+        }
+
+        /* styling a link on hover */
+        .buybonsai a {
+          text-decoration: none;
+          color: #004921;
+        }
+
+         /* styling the image of the products part */
+        .buybonsai img {
+          height: 265px;
+          width: 265px;
+          margin: 17px 0px 0px 17px;
+          transition: 0.3s all;
+          display: block;
+          border-radius: 5px;
+        }
+
+        /* styling the image of the products on hover */
+        /* adding a transition that changes the size of the image on hover */
+        .buybonsai:hover img {
+          transition: 0.3s;
+          transform: scale(1.05);
+          z-index: 2;
+        }
+
+        /* styling the h3 of productname class */
+        .productname h3 {
+          text-align: center;
+          margin-top: 10px;
+          font-size: 22px;
+        }
+
+        /* styling the h3 of price class */
+        .price h3 {
+          text-align: center;
+          font-family: monospace;
+          color: #FDF8F0;
+        }
+
+        /* styling the button of the product box that we created and hiding it by
+        making the opacity 0 for a transition */
+        .buybonsai .buy-btn {
+          display: block;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+          background-color: #FACE4D;
+          transform: translate(20px);
+          opacity: 0;
+          transition: 0.3s all;
+          border: none;
+          color: #FDF8F0;
+          border-radius: 30px;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+
+        /* making the opacity 1 so that the button gets displayed on hover */
+        .buybonsai:hover .buy-btn {
+          transform: translate(0);
+          opacity: 1;
+        }
+
+        /* styling background image */
+        .bgimage {
+          background-image: url('images/landscape.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+
+        /* styling customers review */
+        .review1,
+        .review2,
+        .review3 {
+          margin-top: 100px;
+          text-align: center;
+          color: #004921;
+        }
+
+        /* styling font size and margin */
+        .rvw-txt {
+          font-size: 1rem;
+          margin: 20px 80px 20px 80px;
+        }
+
+                /* styling the submit button */
+                input[type=submit]{
+            background-color: #FACE4D;
+            color: #004921;
+            font-weight: bold;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px 25px;
+        }
+
+        /* hover effect of submit button */
+        input[type=submit]:hover{
+            background-color: #E6BA16;
+
+        }
+
+        /* styling the form fields */
+        input[type=text]{
+            border: none;
+            border-radius: 2px 2px;
+            padding: 8px 10px 8px 10px;
+        }
+
+        /* styling the form fields */
+        input[type=text][name=email]{
+            padding: 8px 220px 8px 10px;
+        }
+    </style>
+  </head>
+
+  <body>
+      <!-- div for the navigation bar -->
+      <header class="header" style="background-color: #FDF8F0;">
+        <!-- div for the navigation links on the left portion of the header -->
+        <nav class="navleft">
+          <ul>
+            <li>
+              <a href="index.html" class="navlink">Home</a>
+            </li>
+  
+            <li>
+              <a href="pages/product.html" class="navlink">Products</a>
+            </li>
+  
+            <li>
+              <a href="pages/research.html" class="navlink">Research</a>
+            </li>
+  
+            <li>
+              <a href="pages/blog.html" class="navlink">Blog</a>
+            </li>
+  
+            <li>
+              <a href="pages/aboutus.html" class="navlink">About Us</a>
+            </li>
+  
+            <li>
+              <a href="pages/contactus.html" class="navlink">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <!-- div for the search bar and user icon on the right portion of header -->
+        <nav class="navright">
+            <!-- input field for search bar -->
+            <input class="search" type="text" placeholder="Search Here">
+            <!-- user icon -->
+            <img src="icons/user.png" alt="cart" style="height:40px; width:40px; margin-top:24px; margin-bottom:20px; float:right; padding-right:40px; cursor:pointer;">
+        </nav>
+  
+        <!-- div for the logo in the center of the header -->
+        <nav class="logo">
+          <a href="index.html">
+            <img src="images/1.png" alt="bonsaiverse logo" height="100px" width="100px">
+          </a>
+        </nav>
+    </header>
+
+    <!-- creating a wrapper div -->
+    <main div="maindiv">
+      <!-- creating a section for slideshow image container -->
+      <!-- styling the container using inline CSS -->
+      <section style="height:550px">
+        <!-- creating a div for slideshow image container -->
+        <div class="slidingimg-container">
+          <!-- creating a div for sliding images & styling it using inline CSS -->
+          <div class="slidingimg fade" style="width:75%; height:550px;">
+            <!-- adding images inside created div -->
+            <img src="images/bonsai1.jpg" style="width:100%; height:100%" alt="bonsai-plant">
+          </div>
+
+          <div class="slidingimg fade" style="width:75%; height:550px;">
+            <img src="images/bonsai2.jpg" style="width:100%; height:100%" alt="bonsai-plant">
+          </div>
+
+          <div class="slidingimg fade" style="width:75%; height:550px;">
+            <img src="images/bonsai3.jpg" style="width:100%; height:100%" alt="bonsai-plant">
+          </div>
+
+          <div class="slidingimg fade" style="width:75%; height:550px;">
+            <img src="images/bonsai4.jpg" style="width:100%; height:100%" alt="bonsai-plant">
+          </div>
+
+          <!-- implementing javascript that automatically changes picture after certain times -->
+          <script>
+            //initializing slideIndex to zero
+            let slideIndex = 0;
+            //calling the showSlides function
+            showSlides();
+            //function to show images in slides
+            function showSlides() {
+              //declaring the variable to loop the images
+              let i;
+              //get all elements having class name "slidingimg"
+              let slides = document.getElementsByClassName("slidingimg");
+              //loop through all sliding images and hide them
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              //increasing the slideIndexby one
+              slideIndex++;
+              //checking if slideIndex is greater than the number of slides
+              if (slideIndex > slides.length) {
+                //setiing slideIndex back to one
+                slideIndex = 1
+              }
+              //displaying the current slide
+              slides[slideIndex - 1].style.display = "block";
+              //setting the interval to call the showSlides function after two seconds
+              //sliding image changes every 2 seconds
+              setTimeout(showSlides, 2000);
+            }
+          </script>
+        </div>
+ 
+        <!-- creating a div to add styling and bonsai quote -->
+        <div class="products-show" style="width:30%; height:450px; border-radius: 10px 10px; margin-left:0; background-color:#FDF8F0; position:relative; left:70px; bottom:500px;">
+          <h1 style="color:#004921; text-align:center; padding-top:20px; padding-bottom: 40px; font-size:2.6rem;">
+            BonsaiVerse
+          </h1>
+          <!-- adding a quote using paragraph tag -->
+          <p style="text-align: left; font-size: 2rem; color:black; padding-left: 100px;">
+            Bonsai, <br>one more step <br>towards your <br>happiness
+          </p>
+          <!-- creating a clickable button and styling it using inline CSS -->
+          <a class="button" href="pages/blog.html" style="font-size: 1.8rem; ">
+            Read More
+          </a>
+         </div>
+      </section>
+
+      <!-- styling h1 tag using inline CSS -->
+      <h1 style="padding-top: 20px; padding-bottom: 20px; text-align: center; color:#004921; background-color:#FDF8F0;">Our Best Selling Products!!</h1>
+    <!-- creating section to add background image -->
+    <section class="bgimage">
+      <!-- creating a section to add products  -->
+      <section style="height:450px">
+      <!-- creating div consisting products row -->
+      <div class="row">
+              <div class="buybonsai">
+                <!-- linking each products to product page using anchor tag -->
+                <a href="pages/product.html">
+                    <img src="images/bonsai.12.jpg">
+                    <div class="productname">
+                      <h3>Cherry Blossom</h3>
+                    </div>
+                    <div class="price">
+                      <h3>Rs-6000</h3>
+                    </div>
+                    <!-- creating the button to buy products -->
+                    <button class="buy-btn">Buy now</button>
+                </a>
+              </div>              
+              
+              <!-- adding image of the product -->
+              <div class="buybonsai">
+                <a href="pages/product.html">
+                  <img src="images/bonsai.4.jpg">
+                  <div class="productname">
+                    <h3>Mulberry</h3>
+                  </div>
+                  <div class="price">
+                    <h3>Rs-4800</h3>
+                  </div>
+                  <button class="buy-btn">Buy now</button>
+                </a>
+              </div>
+
+              <div class="buybonsai">
+                <a href="pages/product.html">
+                  <img src="images/bonsai.7.jpg">
+                  <div class="productname">
+                    <h3>Chinese Juniper</h3>
+                  </div>
+                  <div class="price">
+                    <h3>Rs-6000</h3>
+                  </div>
+                  <button class="buy-btn">Buy now</button>
+                </a>
+              </div>
+
+              <div class="buybonsai">
+                <a href="pages/product.html">
+                  <img src="images/bonsai.6.jpg">
+                  <div class="productname">
+                    <h3>Japanese Red Pine</h3>
+                  </div>
+                  <div class="price">
+                    <h3>Rs-5700</h3>
+                  </div>
+                  <button class="buy-btn">Buy now</button>
+                </a>
+              </div>
+      </div>
+      </section>
+      <br>
+
+      <!-- styling h1 using inline CSS -->
+      <h1 style="padding-top: 25px; padding-bottom: 15px; text-align: center; color:#004921; background-color:#FDF8F0; font-size: xx-large;">
+      Origin of Bonsai Plants
+      </h1>
+
+      <!-- creating a section to add a blog & corresponding picture -->
+      <section style="height:500px; width:100%; background-color: #FDF8F0;">
+        <!-- creating a div to add blog -->
+        <!-- Using float to move blog div  -->
+        <div class="" style="float:left;">
+          <!-- adding blog using paragraph tag -->
+          <p style="font-size:1.3rem; font-family: monospace; text-align: justify; margin-right: 50%; padding-top: 60px; padding-left: 35px;">
+            Bonsai is a Japanese art form that involves growing miniature trees in containers. The practice of bonsai is said to have started over a thousand years ago in China, and was later introduced to Japan. In Japan, bonsai became highly stylized
+            and was developed into the sophisticated art form that it is today. Bonsai gained popularity in the West in the later 19th and early 20th centuries, and is now enjoyed by people all over the world. The art of bonsai involves careful pruning
+            and training of the tree to achieve a desired shape, as well as judicious use of techniques such as wiring, potting, and fertilizing. Today, bonsai is considered both a form of artistic expression, a reflection of nature in miniature and a
+            horticultural practice which is enjoyed by millions of people.
+          </p>
+        </div>
+        <!-- adding image for blog -->
+        <img src="images/origin.jpg" alt="" style="position: relative; left:55%; bottom:400px;">
+      </section>
+
+      <!-- creating a section to add customers review -->
+      <section style="height:700px; width:100%;">
+        <h1 style="font-size:2.6rem; padding-top: 20px; padding-bottom: 20px; text-align: center; color:#004921;">
+        What people are saying
+        </h1>
+
+        <div class="review1" style="width:400px; height:400px; background-color:#FDF8F0; margin-top: 20px; position:relative; right:30%; border-radius: 15px 15px; text-align: justify;">
+          <h2 style="padding-top:20px; padding-bottom:20px; text-align: center;">Nimesh Dangi</h2>
+          <h3 style="text-align: center;">&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+          <p class="rvw-txt" style=" font-family: monospace; font-size: 0.99rem;">You experimented with Blue Plant on one of two identical plants and found that the plant treated with Blue Plant was larger with more leaves and less stalkiness.</p>
+        </div>
+
+        <div class="review2" style="width:400px; height:400px; background-color:#FDF8F0; margin-top: 40px; position:relative; bottom:400px; border-radius: 15px 15px; text-align: justify;">
+          <h2 style="padding-top:20px; padding-bottom:20px; text-align: center;">Utsav Rai</h2>
+          <h3 style="text-align: center;">&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+          <p class="rvw-txt" style=" font-family: monospace; font-size: 0.99rem;">These are quite effective at controlling fleas. We've used them in the past few years to prevent grub damage to the lawn, and this year we employed them to eliminate fleas on a freshly laid
+            lawn. With the dogs and cats in the yard, they work great, and we don't need to use any chemicals to keep fleas away. fantastic stuff</p>
+        </div>
+
+        <div class="review3" style="width:400px; height:400px; background-color:#FDF8F0; margin-top: 60px; position:relative; bottom: 800px; left:30%; border-radius: 15px; text-align: justify;">
+          <h2 style="padding-top:20px; padding-bottom:20px; text-align: center;">Mijal Tamrakar</h2>
+          <h3 style="text-align:center;">&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+          <p class="rvw-txt" style=" font-family: monospace; font-size: 0.99rem;">When my air plants arrived, I was overjoyed and pleased. They all had distinctive differences, arrived earlier than anticipated, and were in excellent shape. Two of them I gave away as gifts
+            to other gardeners. After a few weeks, they are doing quite well, and I enjoy seeing them every day.</p>
+        </div>
+      </section>
+    </section>
+    </main>
+
+    <footer>
+      <!-- div for the footer -->
+      <div class="footerdiv">
+          <!-- div for the newsletter form -->
+          <div class="newsletter-div">
+              <p>
+                  <h3 style="color: #FACE4D;">Join Our Newsletter</h3><br>
+                  <!-- form for joining the newsletter -->
+                  <form name="joinNewsletter" onsubmit="newsletter()">
+                      <input type="text" name="emailId" placeholder="Email Address">
+                      <br><br>
+                      <input type="submit" value="Join Now">
+                  </form>
+              </p>
+          </div>
+          
+          <!-- div for quick links in footer -->
+          <div class="footerlink-div">
+              <ul>
+                  <h3 style="color: #FACE4D;">Quick Links</h3><br>
+                  <li><a href="index.html" class="footer-link">Home</a></li>
+                  <li><a href="pages/product.html" class="footer-link">Products</a></li>
+                  <li><a href="pages/aboutus.html" class="footer-link">About Us</a></li>
+                  <li><a href="pages/research.html" class="footer-link">Research</a></li>
+                  <li><a href="pages/blog.html" class="footer-link">Blog</a></li>
+              </ul>    
+          </div>
+          
+          <!-- div for address information in footer -->
+          <div class="address-div">
+              <h3 style="color: #FACE4D;">Address</h3><br>
+              <p>Islington College, Kamalpokhari<br>Kathmandu, Nepal<br>01-5970012, 9801042242<br>info@team1.com.np</p>
+          </div>
+
+          <!-- div for social media links in footer -->
+          <div class="followus-div">
+              <h3 style="color: #FACE4D;">Follow us</h3>
+              <!-- div for the social media icons -->
+              <div class="sns-icons">
+                  <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank">
+                      <img src="images/facebook.png" alt="f" height="50px" width="50px">
+                  </a>
+                  <a href="https://www.google.com/" class="fa fa-google" target="_blank">
+                      <img src="images/google.png" alt="g" height="50px" width="50px">
+                  </a>
+                  <a href="https://twitter.com/" class="fa fa-twitter" target="_blank">
+                      <img src="images/twitter.png" alt="t" height="50px" width="50px">
+                  </a>
+                  <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank">
+                      <img src="images/instagram.png" alt="i" height="50px" width="50px">
+                  </a>               
+              </div>        
+
+              <!-- div for copyright -->
+              <div class="copyright">
+                  <h5 style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter;">&copy; Copyright 2023 Islington College</h5>
+              </div>
+          </div>
+
+
+        <!-- javascript for pop up message while joining newsletter -->
+        <script type="text/javascript">
+            function newsletter(){
+                //getting the value of email from user and storing it in a variable
+                var news = document.forms["joinNewsletter"]["emailId"].value
+                //checking if email address is empty or not and alerting accordingly
+                if(news=="")
+                {
+                    alert("Please enter your email address to join our newsletter!");
+                }
+                else
+                {
+                    alert("You have successfully joined our newsletter!");
+                }
+            }
+        </script>
+      </footer>
+      </div>
+  </body>
+</html>

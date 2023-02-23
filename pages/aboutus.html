@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <!-- These are meta tags for search engine optimization-->
+      <meta charset="utf-8">
+      <meta name="description" content="Best place to buy bonsai plants.">
+      <meta name="keywords" content="Bonsai, Plants, E-commerce, store, online store, plants">
+      <meta name="author" content="Sharia Ali, Abinash Yadav, Anugya Shah, Nikant Gharti Magar, Utsav Rai">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonsaiVerse</title>
+    <!-- linking external css that includes styles for header and footer -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- This is a link to view favicon in browsers tab  -->
+    <link rel="icon" href="../icons/favicon.png">
+    <!-- internal css for styling common components of the product page -->
+    <!-- in-line css was used to style some unique and specific components of the product page -->
+    <style type="text/css">
+        *{
+          margin: 0px auto;  
+        }
+
+        .maindiv{
+            height: 2700px;
+        }
+
+        /* styling the side navigation bar */
+        .sidenav{
+            float: left;
+            width: 15%;
+            background-color: #004921;
+            margin-left: 30px;
+            margin-top: 15px;
+            border-radius: 5px;
+            position: fixed;
+        }
+
+        /* styling the links in side nav bar */
+        .sidenav a{
+            text-decoration: none;
+            display: block;
+            color: #ffffff;
+        }
+
+        /* hover effect on side nav bar links */
+        .sidenav a:hover{
+            color: #FACE4D;
+        }
+
+        /* position of side nav var links */
+        .memberlinks{
+            padding: 20px;
+        }
+
+        /* position for section of member's portfolio */
+        .memberdiv{
+            float: right;
+            width: 80%;
+            height: 500px;
+        }
+
+        /* position of member content */
+        .memberinfo{
+            float: left;
+            height: 540px;
+        }
+
+        /* position of specific member contents */
+        .shariainfo, .abinashinfo, .anugyainfo, .nikantinfo, .utsavinfo{
+            width: 350px;
+            height: 435px;
+            padding: 54px 30px 65px 30px;
+            margin-top: 50px;
+            background-color: #fdf8f0;
+            border-radius: 20px 20px;
+        }
+
+        /* position for member image */
+        .memberpic{
+            margin-right: 150px;
+            float: right;
+            margin-top: 75px;
+        }
+
+        /* position for specific member image */
+        .sharia, .abinash, .anugya, .nikant, .utsav{
+            padding: 50px;
+        }
+
+        /* styling specific member image */
+        .shariapic, .abinashpic, .anugyapic, .nikantpic, .utsavpic{
+            border-radius: 50%;
+        }
+
+        /* position of member content */
+        .memberinfo2{
+            float: right;
+            height: 540px;
+            margin-right: 150px;
+        }
+
+        /* position of member image */
+        .memberpic2{
+            float: left;
+            margin-top: 75px;
+        }
+
+        /* hover effect on member image */
+        .shariapic:hover, .abinashpic:hover, .anugyapic:hover, .nikantpic:hover, .utsavpic:hover {
+            transition: 0.3s;
+            transform:scale(1.05);
+            /* z-index: 2; */
+            cursor: pointer;
+        }
+
+        /* styling the submit button */
+        input[type=submit]{
+            background-color: #FACE4D;
+            color: #004921;
+            font-weight: bold;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px 25px;
+        }
+
+        /* hover effect of submit button */
+        input[type=submit]:hover{
+            background-color: #E6BA16;
+
+        }
+
+        /* styling the form fields */
+        input[type=text]{
+            border: none;
+            border-radius: 2px 2px;
+            padding: 8px 10px 8px 10px;
+        }
+
+        /* styling the form fields */
+        input[type=text][name=email]{
+            padding: 8px 220px 8px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- div for the navigation bar -->
+    <header class="header">
+        <!-- div for the navigation links on the left portion of the header -->
+        <nav class="navleft">
+            <ul>
+            <li>
+                <a href="../index.html" class="navlink">Home</a>
+            </li>
+    
+            <li>
+                <a href="product.html" class="navlink">Products</a>
+            </li>
+    
+            <li>
+                <a href="research.html" class="navlink">Research</a>
+            </li>
+    
+            <li>
+                <a href="blog.html" class="navlink">Blog</a>
+            </li>
+    
+            <li>
+                <a href="aboutus.html" class="navlink">About Us</a>
+            </li>
+    
+            <li>
+                <a href="contactus.html" class="navlink">Contact Us</a>
+            </li>
+            </ul>
+        </nav>
+    
+        <!-- div for the search bar and user icon on the right portion of header -->
+        <nav class="navright">
+            <!-- input field for search bar -->
+            <input class="search" type="text" placeholder="Search Here">
+            <!-- user icon -->
+            <img src="../icons/user.png" alt="cart" style="height:40px; width:40px; margin-top:24px; margin-bottom:20px; float:right; padding-right:40px; cursor:pointer;">
+        </nav>
+    
+        <!-- div for the logo in the center of the header -->
+        <div class="logo">
+            <a href="../index.html">
+            <img src="../images/1.png" alt="bonsaiverse logo" height="100px" width="100px">
+            </a>
+        </div>
+    </header>
+
+    <!-- wrapper div for the webpage -->
+    <main class="maindiv">
+        <!-- side navigation bar to nabigate to each member of the team -->
+        <nav class="sidenav">
+            <section class="memberlinks">
+                <h2 style="color: #ffffff;">TEAM 1</h2><br><br>
+                <!-- calling specific ids so that the section of each member is called onclick -->
+                <a href="#shariaclick">Sharia Ali</a><br>
+                <a href="#abinashclick">Abinash Yadav</a><br>
+                <a href="#anugyaclick">Anugya Shah</a><br>
+                <a href="#nikantclick">Nikant Gharti Magar</a><br>
+                <a href="#utsavclick">Utsav Rai</a><br>
+            </section>
+        </nav>
+
+        <!-- section for a member's portfolio -->
+        <section class="memberdiv">
+            <!-- figure for member's picture -->
+            <figure class="memberpic">
+                <div class="sharia">
+                    <img class="shariapic" src="../images/shariapic.png" alt="hot person" height="400px" width="400px">
+                </div>
+            </figure>
+            
+            <!-- div for member information and assigning a unique id to each member-->
+            <div class="memberinfo" id="shariaclick">
+                <div class="shariainfo">
+                    <h2>Sharia Ali</h2>
+                    <div style="margin-top: 20px;">
+                        <h3>Address: Balkumari, Lalitpur
+                        <br>Contact: +977 9806810491
+                        <br>Date of Birth: 2003/08/02</h3><br>
+                        <h3>Education:</h3><br>
+                        <ul>
+                            <li><p>June 2022 to Present <br> BSc.(Hons) Computing<br>Islington College</p></li>
+                            <li><p>March 2019 - December 2021 <br> Cambridge A-level Certificate <br> GEMS Institute of Higher Education </p></li><br>
+                        </ul>
+                        <h3>Skills and Competences</h3><br>
+                        <ul>
+                            <li>Languages spoken: Nepali, English, Hindi, Urdu, Korean </li>
+                            <li>Skills: Web development, Video Editing, MS Office, Communication, Leadership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="memberdiv">
+            <div class="memberinfo2" id="abinashclick">
+                <div class="abinashinfo">
+                    <h2>Abinash Yadav</h2>
+                    <div style="margin-top: 20px;">
+                        <h3>Address: Pepsicola, Kathmandu
+                        <br>Contact: +977 9803020378
+                        <br>Date of Birth: 2002/08/18</h3><br>
+                        <h3>Education:</h3><br>
+                        <ul>
+                            <li><p>June 2022 to Present <br> BSc.(Hons) Computing<br>Islington College</p></li>
+                            <li><p>July 2019 - September 2021 <br> High School Science <br> Kathmandu Model Secondary School, Bagbazar </p></li><br>
+                        </ul>
+                        <h3>Skills and Competences</h3><br>
+                        <ul>
+                            <li>Languages spoken: English, Nepali, Hindi, Spanish (learning) </li>
+                            <li>Skills: Data Analysis, G-Suite, MS Office, Planning, Teamwork</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memberpic2">
+                <figure class="abinash">
+                    <img class="abinashpic" src="../images/abinashpic.png" alt="nerdy person" height="400px" width="400px">
+                </figure>
+            </div>
+        </section>
+
+        <section class="memberdiv">
+            <figure class="memberpic">
+                <div class="anugya">
+                    <img class="anugyapic" src="../images/anugyapic.png" alt="cool person" height="400px" width="400px">
+                </div>
+            </figure>
+    
+            <div class="memberinfo">
+                <div class="anugyainfo" id="anugyaclick">
+                    <h2>Anugya Shah</h2>
+                    <div style="margin-top: 20px;">
+                        <h3>Address: Dhobighat, Lalitpur
+                        <br>Contact: +977 9847346905
+                        <br>Date of Birth: 2002/10/25</h3><br>
+                        <h3>Education:</h3><br>
+                        <ul>
+                            <li><p>June 2022 to Present <br> BSc.(Hons) Computing<br>Islington College</p></li>
+                            <li><p>July 2019 - September 2021 <br> High School, Science  <br> Modern Indian School, Chobar </p></li><br>
+                        </ul>
+                        <h3>Skills and Competences</h3><br>
+                        <ul>
+                            <li>Languages spoken: Nepali, English, Hindi</li>
+                            <li>Skills: Graphic Design, Software Skills, Decision Making, Creative Work</li>
+                        </ul>
+                    </div>
+            </div>
+        </section>
+
+        <section class="memberdiv">
+            <div class="memberinfo2">
+                <div class="nikantinfo" id="nikantclick">
+                    <h2>Nikant Gharti Magar</h2>
+                    <div style="margin-top: 20px;">
+                        <h3>Address: Kirtipur, Kathmandu
+                        <br>Contact: +977 9809598299
+                        <br>Date of Birth: 2002/08/12</h3><br>
+                        <h3>Education:</h3><br>
+                        <ul>
+                            <li><p>June 2022 to Present <br> BSc.(Hons) Computing<br>Islington College</p></li>
+                            <li><p>July 2019 - September 2021 <br> High School Science <br> Narayani Secondary School, Chitwan </p></li><br>
+                        </ul>
+                        <h3>Skills and Competences</h3><br>
+                        <ul>
+                            <li>Languages spoken: Nepali, English, Hindi</li>
+                            <li>Skills: Athlete, Public Speaking, Teamwork, Decision Making</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memberpic2">
+                <figure class="nikant">
+                    <img class="nikantpic" src="../images/nikantpic.png" alt="chill person" height="400px" width="400px">
+                </figure>
+            </div>
+        </section>
+
+        <section class="memberdiv">
+            <figure class="memberpic">
+                <div class="utsav">
+                    <img class="utsavpic" src="../images/utsavpic.png" alt="funny person" height="400px" width="400px">
+                </div>
+            </figure>
+    
+            <div class="memberinfo">
+                <div class="utsavinfo" id="utsavclick">
+                    <h2>Utsav Rai</h2>
+                    <div style="margin-top: 20px;">
+                        <h3>Address: Buddhanilkantha, Kathmandu
+                        <br>Contact: +977 9862414547
+                        <br>Date of Birth: 2003/12/31</h3><br>
+                        <h3>Education:</h3><br>
+                        <ul>
+                            <li><p>June 2022 to Present <br> BSc.(Hons) Computing<br>Islington College</p></li>
+                            <li><p>July 2019 - September 2021 <br> High School Science <br> Xavier Academy, Lazimpat
+                            </p></li><br>
+                        </ul>
+                        <h3>Skills and Competences</h3><br>
+                        <ul>
+                            <li>Languages spoken: Nepali, English, Hindi </li>
+                            <li>Skills: Teamwork, Problem Solving, Active listening, Planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- div for the footer -->
+        <div class="footerdiv">
+            <!-- div for the newsletter form -->
+            <div class="newsletter-div">
+                <p>
+                    <h3 style="color: #FACE4D;">Join Our Newsletter</h3><br>
+                    <!-- form for joining the newsletter -->
+                    <form name="joinNewsletter" onsubmit="newsletter()">
+                        <input type="text" name="emailId" placeholder="Email Address">
+                        <br><br>
+                        <input type="submit" value="Join Now">
+                    </form>
+                </p>
+            </div>
+            
+            <!-- div for quick links in footer -->
+            <div class="footerlink-div">
+                <ul>
+                    <h3 style="color: #FACE4D;">Quick Links</h3><br>
+                    <li><a href="../index.html" class="footer-link">Home</a></li>
+                    <li><a href="product.html" class="footer-link">Products</a></li>
+                    <li><a href="aboutus.html" class="footer-link">About Us</a></li>
+                    <li><a href="research.html" class="footer-link">Research</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                </ul>    
+            </div>
+            
+            <!-- div for address information in footer -->
+            <div class="address-div">
+                <h3 style="color: #FACE4D;">Address</h3><br>
+                <p>Islington College, Kamalpokhari<br>Kathmandu, Nepal<br>01-5970012, 9801042242<br>info@team1.com.np</p>
+            </div>
+
+            <!-- div for social media links in footer -->
+            <div class="followus-div">
+                <h3 style="color: #FACE4D;">Follow us</h3>
+                <!-- div for the social media icons -->
+                <div class="sns-icons">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank">
+                        <img src="../images/facebook.png" alt="f" height="50px" width="50px">
+                    </a>
+                    <a href="https://www.google.com/" class="fa fa-google" target="_blank">
+                        <img src="../images/google.png" alt="g" height="50px" width="50px">
+                    </a>
+                    <a href="https://twitter.com/" class="fa fa-twitter" target="_blank">
+                        <img src="../images/twitter.png" alt="t" height="50px" width="50px">
+                    </a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank">
+                        <img src="../images/instagram.png" alt="i" height="50px" width="50px">
+                    </a>               
+                </div>        
+
+                <!-- div for copyright -->
+                <div class="copyright">
+                    <h5 style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter;">&copy; Copyright 2023 Islington College</h5>
+                </div>
+        </div>
+
+
+        <!-- javascript for pop up message while joining newsletter -->
+        <script type="text/javascript">
+            function newsletter(){
+                //getting the value of email from user and storing it in a variable
+                var news = document.forms["joinNewsletter"]["emailId"].value
+                //checking if email address is empty or not and alerting accordingly
+                if(news=="")
+                {
+                    alert("Please enter your email address to join our newsletter!");
+                }
+                else
+                {
+                    alert("You have successfully joined our newsletter!");
+                }
+            }
+        </script>
+    </footer>
+</body>
+</html>

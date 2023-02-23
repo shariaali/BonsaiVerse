@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <!-- These are meta tags for search engine optimization-->
+      <meta charset="utf-8">
+      <meta name="description" content="Best place to buy bonsai plants.">
+      <meta name="keywords" content="Bonsai, Plants, E-commerce, store, online store, plants">
+      <meta name="author" content="Sharia Ali, Abinash Yadav, Anugya Shah, Nikant Gharti Magar, Utsav Rai">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonsaiVerse</title>
+    <!-- linking external css that includes styles for header and footer -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- This is a link to view favicon in browsers tab  -->
+    <link rel="icon" href="../icons/favicon.png">
+        <!-- internal css for styling common components of the product page -->
+    <!-- in-line css was used to style some unique and specific components of the product page -->
+    <style type="text/css">
+        *{
+          margin: 0px auto; 
+ 
+        }
+
+        .maindiv{
+            height: 2200px;
+        }
+
+        /*styling and positioning the sidenav bar 
+        and also giving color and size to the links */
+        .sidenav{
+            float: left;
+            background-color: #004921;
+            height: 330px;
+            width: 200px;
+            margin-top: 25px;
+            margin-left: 25px;
+            color: #FDF8F0;
+            padding: 6px 0px 0px 20px;
+            font-size: 15px;
+            border-radius: 7px;
+        }
+
+        /*styling the links inside the sidenav bar*/
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            font-size: 15px;
+            color: #FDF8F0;
+            display: block;
+            text-decoration: none;
+        }
+
+        /*color changing of links on hover*/
+        .sidenav a:hover {
+            color: #FACE4D;
+        }
+
+        /*styling the h2 of the heading class*/
+        .heading h2{
+            font-size: 50px;
+            font-weight: bold;
+            color: #004921;
+            padding-left: 300px;
+            padding-top: 30px;
+        }
+
+        /* defining positions of all the rows  */
+        .row1, .row2, .row3, .row4{
+            float: right;
+            margin-right: 50px;
+        }
+
+        /*styling the box that has the products in it */
+        .buybonsai{
+            background-color: #8aa895;
+            float: right;
+            height: 390px;
+            width: 300px;
+            margin-right: 30px;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        /*styling the link on hover*/
+        .buybonsai a{
+            text-decoration: none;
+            color: #004921;
+        }
+
+        /*styling the image of the products part*/
+        .buybonsai img{
+            height: 265px;
+            width: 265px;
+            margin: 17px 0px 0px 17px;
+            transition: 0.3s all;
+            display: block;
+            border-radius: 5px;
+        }
+
+        /*styling the image of the products on hover*/
+        /*adding a transition that changes the size of the image on hover*/
+        .buybonsai:hover img{
+            transition: 0.3s;
+            transform:scale(1.05) ;
+            /* z-index: 2; */
+        }
+
+
+        /*styling the h3 of productname class*/
+        .productname h3{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 22px;
+            
+        }
+
+        /*styling the h3 of price class*/
+        .price h3{
+            text-align: center;
+            font-family: monospace;
+            color: #FDF8F0;
+
+        }
+
+        /*styling the button of the product box that we created 
+        and hiding it by making the opacity 0 for a transistion*/
+        .buybonsai .buy-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            font-size: 20px;
+            background-color: #FACE4D;
+            transform: translate(20px);
+            opacity: 0;
+            transition: 0.3s all;
+            border: none;
+            color: #FDF8F0;
+            border-radius: 30px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /*making the opacity 1 so that the button gets displays on hover*/
+        .buybonsai:hover .buy-btn{
+            transform: translate(0);
+            opacity: 1;
+        }
+
+        /*styling the salebar that shows a timer*/
+        .saleBar{
+            background-color: #FDF8F0;
+             height: 60px;
+            width: 100%;
+        }
+
+        /*styling the <p> tag of salebar*/
+        .saleBar p {
+            text-align: center;
+            font-family: monospace;
+            color: black;
+            font-size: 25px;
+        }
+
+        /*styling the timer id*/
+        #timer{
+            text-align: center;
+            font-size: 25px;
+            margin-top: 0px;
+        }
+
+        /* styling the submit button */
+        input[type=submit]{
+            background-color: #FACE4D;
+            color: #004921;
+            font-weight: bold;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px 25px;
+        }
+
+        /* hover effect of submit button */
+        input[type=submit]:hover{
+            background-color: #E6BA16;
+
+        }
+
+        /* styling the form fields */
+        input[type=text]{
+            border: none;
+            border-radius: 2px 2px;
+            padding: 8px 10px 8px 10px;
+        }
+
+        /* styling the form fields */
+        input[type=text][name=email]{
+            padding: 8px 220px 8px 10px;
+        }    
+</style>
+	<title>BonsaiVerse</title>
+</head>
+<body>
+        <!-- div for the navigation bar -->
+        <header class="header">
+            <!-- div for the navigation links on the left portion of the header -->
+            <nav class="navleft">
+              <ul>
+                <li>
+                  <a href="../index.html" class="navlink">Home</a>
+                </li>
+      
+                <li>
+                  <a href="product.html" class="navlink">Products</a>
+                </li>
+      
+                <li>
+                  <a href="research.html" class="navlink">Research</a>
+                </li>
+      
+                <li>
+                  <a href="blog.html" class="navlink">Blog</a>
+                </li>
+      
+                <li>
+                  <a href="aboutus.html" class="navlink">About Us</a>
+                </li>
+      
+                <li>
+                  <a href="contactus.html" class="navlink">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+      
+            <!-- div for the search bar and user icon on the right portion of header -->
+            <nav class="navright">
+                <!-- input field for search bar -->
+                <input class="search" type="text" placeholder="Search Here">
+                <!-- user icon -->
+                <img src="../icons/user.png" alt="cart" style="height:40px; width:40px; margin-top:24px; margin-bottom:20px; float:right; padding-right:40px; cursor:pointer;">
+            </nav>
+      
+            <!-- div for the logo in the center of the header -->
+            <nav class="logo">
+              <a href="../index.html">
+                <img src="../images/1.png" alt="bonsaiverse logo" height="100px" width="100px">
+              </a>
+            </nav>
+        </header>
+
+    <!-- wrapper div for webpage -->
+    <main class="maindiv">
+        <!-- picture for the top of the webpage -->
+		<div class="topPic">
+	        	<img src="../images/toppic.png" height="170px" width="100%">
+	    </div>
+
+        <!-- to display a section that displays that their is an ongoing sale -->
+        <div class="saleBar">
+            <p>sale!!! ENDS IN!!! </p> 
+            <!-- giving an id name timer -->
+            <p id="timer"></p>
+                <!-- implementing javascript that runs the timer in realtime  -->
+                <script>
+                    // setting the wanted date in which the sale ends
+                    var countDownDate = new Date("Feb 6, 2023 24:00:00").getTime(); 
+                    // updating the count so that it decreses every second
+                    var x = setInterval(function(){
+                    
+                    // getting today's date 
+                    var now = new Date().getTime();
+                    
+                    // finding the time left (subtracting the wanted date to the current date)
+                    var distance = countDownDate - now;
+
+                    // calculating the time for days, hours, minutes, and seconds 
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    // displaying the output which is the timer by calling the id timer
+                    document.getElementById("timer").innerHTML = days + "D:" + hours + "H:"
+                    + minutes + "M:" + seconds + "S";
+
+                    // displaying the output sale has ended if the sale has ended
+                    if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("timer").innerHTML = "Sale Ended!";
+                    }
+                    }, 1000);
+                </script>
+        </div>
+
+        <!-- creating a side navigation bar that has the categories of the given products -->
+	    <sidenav class="sidenav">
+        	<h1>Categories</h1>
+        	<br>
+            <!-- using anchor tags so that when you click the categories it shows the respective products -->
+        	<a href="#bonsaiclick4">All Bonsai Trees</a>
+        	<a href="#bonsaiclick4">Available Bonsai</a>
+        	<a href="#bonsaiclick2">Beginner Trees / Best Sellers</a>
+        	<a href="#bonsaiclick2">Outdoor Bonsai</a>
+        	<a href="#bonsaiclick3">Indoor Bonsai</a>
+        	<a href="#bonsaiclick3">Mature Bonsai</a>
+        	<a href="#bonsaiclick1">Seeds</a>
+        	<a href="#bonsaiclick1">Flowering Bonsai Trees</a>
+        </sidenav>
+
+        <!-- creating a section that has all the products -->
+        <!-- main section that includes all the products all together -->
+        <section id="Products">
+            <div class="heading">
+                <h2>Products</h2>
+            </div>
+
+            <!-- creating divs for each product and allocating them in classes row wise -->
+            <div class="row1" id="bonsaiclick1">
+                <!-- div for a single product -->
+                <div class="buybonsai">
+                    <a href="#">
+                    <img src="../images/bonsai.3.jpg">
+                    <!-- div for product name -->
+                    <div class="productname">
+                        <h3>Ficus</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                        <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-4000</s>
+                        Rs-3000
+                        </h3>
+                    </div>
+                        <!-- calling onclick javascript function called addCart() -->
+                        <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.2.jpg">
+                    <div class="productname">
+                        <h3>Honeysuckle</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-5000</s>
+                            Rs-4500
+                            </h3>
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.1.jpg">
+                    <div class="productname">
+                        <h3>Fukien tea</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-5300</s>
+                            Rs-4800
+                            </h3>
+                    </div>
+                        <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row2" id="bonsaiclick2">
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.6.jpg">
+                    <div class="productname">
+                        <h3>Japanese Red Pine</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-6000</s>
+                            Rs-5700
+                            </h3>
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.4.jpg">
+                    <div class="productname">
+                        <h3>Mulberry</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-5400</s>
+                            Rs-4800
+                            </h3>                   
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.5.jpg">
+                    <div class="productname">
+                        <h3>Larch Bonsai</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-6500</s>
+                            Rs-5900
+                            </h3>                    
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row3" id="bonsaiclick3">
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.7.jpg">
+                    <div class="productname">
+                        <h3>Chinese Juniper</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-6800</s>
+                            Rs-6000
+                            </h3>                    
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.8.jpg">
+                    <div class="productname">
+                        <h3>Shohin Blackthorn</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-3800</s>
+                            Rs-4200
+                            </h3>                    
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.9.jpg">
+                    <div class="productname">
+                        <h3>Mountain Pine</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-4000</s>
+                            Rs-4300
+                            </h3>                   
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row4" id="bonsaiclick4">               
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.10.jpg">
+                    <div class="productname">
+                        <h3>Bamboo Fargesia</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-4800</s>
+                            Rs-5300
+                            </h3>                    
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.11.jpg">
+                    <div class="productname">
+                        <h3>Dwarf Jade</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-6000</s>
+                            Rs-5500
+                            </h3>                    
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>
+                </div>
+
+                <div class="buybonsai">
+                    <a href="">
+                    <img src="../images/bonsai.12.jpg">
+                    <div class="productname">
+                        <h3>Cherry Blossom</h3>
+                    </div>
+                    <div class="price">
+                        <h3>
+                            <s style="text-align: center; font-family: monospace; color: lightcoral;">Rs-6500</s>
+                            Rs-6000
+                            </h3>                    
+                    </div>
+                    <button class="buy-btn" onclick="addCart()">Add to Cart</button>
+                    </a>    
+                </div>
+            </div>   
+        </section>
+
+        <!-- javascript for added to cart pop up message -->
+        <script type="text/javascript">
+            function addCart()
+            {
+                alert("Item is successfully added to the cart!");
+            }
+        </script>
+    </main>
+
+    <footer>
+        <!-- div for the footer -->
+        <div class="footerdiv">
+            <!-- div for the newsletter form -->
+            <div class="newsletter-div">
+                <p>
+                    <h3 style="color: #FACE4D;">Join Our Newsletter</h3><br>
+                    <!-- form for joining the newsletter -->
+                    <form name="joinNewsletter" onsubmit="newsletter()">
+                        <input type="text" name="emailId" placeholder="Email Address">
+                        <br><br>
+                        <input type="submit" value="Join Now">
+                    </form>
+                </p>
+            </div>
+            
+            <!-- div for quick links in footer -->
+            <div class="footerlink-div">
+                <ul>
+                    <h3 style="color: #FACE4D;">Quick Links</h3><br>
+                    <li><a href="../index.html" class="footer-link">Home</a></li>
+                    <li><a href="product.html" class="footer-link">Products</a></li>
+                    <li><a href="aboutus.html" class="footer-link">About Us</a></li>
+                    <li><a href="research.html" class="footer-link">Research</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                </ul>    
+            </div>
+            
+            <!-- div for address information in footer -->
+            <div class="address-div">
+                <h3 style="color: #FACE4D;">Address</h3><br>
+                <p>Islington College, Kamalpokhari<br>Kathmandu, Nepal<br>01-5970012, 9801042242<br>info@team1.com.np</p>
+            </div>
+
+            <!-- div for social media links in footer -->
+            <div class="followus-div">
+                <h3 style="color: #FACE4D;">Follow us</h3>
+                <!-- div for the social media icons -->
+                <div class="sns-icons">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank">
+                        <img src="../images/facebook.png" alt="f" height="50px" width="50px">
+                    </a>
+                    <a href="https://www.google.com/" class="fa fa-google" target="_blank">
+                        <img src="../images/google.png" alt="g" height="50px" width="50px">
+                    </a>
+                    <a href="https://twitter.com/" class="fa fa-twitter" target="_blank">
+                        <img src="../images/twitter.png" alt="t" height="50px" width="50px">
+                    </a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank">
+                        <img src="../images/instagram.png" alt="i" height="50px" width="50px">
+                    </a>               
+                </div>   
+                
+                <!-- div for copyright -->
+                <div class="copyright">
+                    <h5 style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter;">&copy; Copyright 2023 Islington College</h5>
+                </div>
+        </div>
+
+
+        <!-- javascript for pop up message while joining newsletter -->
+        <script type="text/javascript">
+            function newsletter(){
+                //getting the value of email from user and storing it in a variable
+                var news = document.forms["joinNewsletter"]["emailId"].value
+                //checking if email address is empty or not and alerting accordingly
+                if(news=="")
+                {
+                    alert("Please enter your email address to join our newsletter!");
+                }
+                else
+                {
+                    alert("You have successfully joined our newsletter!");
+                }
+            }
+        </script>
+    </footer>
+</body>
+</html>

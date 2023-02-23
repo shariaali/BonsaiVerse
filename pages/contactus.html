@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <!-- These are meta tags for search engine optimization-->
+      <meta charset="utf-8">
+      <meta name="description" content="Best place to buy bonsai plants.">
+      <meta name="keywords" content="Bonsai, Plants, E-commerce, store, online store, plants">
+      <meta name="author" content="Sharia Ali, Abinash Yadav, Anugya Shah, Nikant Gharti Magar, Utsav Rai">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- linking external css that includes styles for header and footer -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- This is a link to view favicon in browsers tab  -->
+    <link rel="icon" href="../icons/favicon.png">
+    <!-- internal css for styling common components of the contact us page -->
+    <!-- in-line css was used to style some unique and specific components of the contact us page -->
+    <style type="text/css">
+        *{
+          margin: 0px auto;  
+        }
+
+        /* styling the image in the contact us page */
+        .contactimage{
+            float: left;
+            width: 42%;
+            margin: 0px auto;
+            padding: 0px 50px 0px 50px;
+        }
+
+        /* styling and fixing padding/margin of the form */
+        .contactform{
+            border-radius: 25px 25px;
+            background-color: #004921;
+            color: #ffffff;
+            float: right;
+            padding: 20px 20px 20px 20px;
+            margin-top: 30px;
+            margin-right: 150px;
+        }
+
+        /* styling submit button */
+        .submitbutton{
+            text-align: center;
+        }
+
+        /* styling the submit button */
+        input[type=submit]{
+            background-color: #FACE4D;
+            color: #004921;
+            font-weight: bold;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px 25px;
+        }
+
+        /* hover effect of submit button */
+        input[type=submit]:hover{
+            background-color: #E6BA16;
+
+        }
+
+        /* styling the form fields */
+        input[type=text]{
+            border: none;
+            border-radius: 2px 2px;
+            padding: 8px 10px 8px 10px;
+        }
+
+        /* styling the form fields */
+        input[type=text][name=email]{
+            padding: 8px 220px 8px 10px;
+        }
+    </style>
+</head>
+<body>
+        <!-- div for the navigation bar -->
+        <header class="header">
+            <!-- div for the navigation links on the left portion of the header -->
+            <nav class="navleft">
+              <ul>
+                <li>
+                  <a href="../index.html" class="navlink">Home</a>
+                </li>
+      
+                <li>
+                  <a href="product.html" class="navlink">Products</a>
+                </li>
+      
+                <li>
+                  <a href="research.html" class="navlink">Research</a>
+                </li>
+      
+                <li>
+                  <a href="blog.html" class="navlink">Blog</a>
+                </li>
+      
+                <li>
+                  <a href="aboutus.html" class="navlink">About Us</a>
+                </li>
+      
+                <li>
+                  <a href="contactus.html" class="navlink">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+      
+            <!-- div for the search bar and user icon on the right portion of header -->
+            <nav class="navright">
+                <!-- input field for search bar -->
+                <input class="search" type="text" placeholder="Search Here">
+                <!-- user icon -->
+                <img src="../icons/user.png" alt="cart" style="height:40px; width:40px; margin-top:24px; margin-bottom:20px; float:right; padding-right:40px; cursor:pointer;">
+            </nav>
+      
+            <!-- div for the logo in the center of the header -->
+            <nav class="logo">
+              <a href="../index.html">
+                <img src="../images/1.png" alt="bonsaiverse logo" height="100px" width="100px">
+              </a>
+            </nav>
+        </header>
+    
+    <!-- wrapper div for webpage -->
+    <main class="maindiv">
+        <!-- div for image in contact us page -->
+        <section>
+            <figure class="contactimage">
+                <img src="../images/contactusimage.png" alt="contact us image" height="500px" width="500px">
+            </figure>
+        </section>
+
+        <section>
+            <!-- div for the form section of the contact us page -->
+            <div class="contactform">
+                <!-- style for title of the form -->
+                <h1 style="display: flex; justify-content: center; color:#FACE4D;">Contact Us</h1><br>
+                <!-- calling the onsubmit function in javascript, this function is called when the form is submitted -->
+                <form name="contactUsForm" onsubmit="validateForm()">
+                    <!-- div for the position of the form fields -->
+                    <div style="float: left; padding: 10px 10px;">
+                        <p>
+                            <input type="text" name="firstName" placeholder="First Name">
+                        </p>
+                    </div>
+
+                    <!-- div for the position of the form fields -->
+                    <div style="float: right; padding: 10px 10px;">
+                        <p>
+                            <input type="text" name="lastName" placeholder="Last Name">
+                        </p>
+                    </div><br><br><br>
+
+                        <p style="padding: 10px 10px;">
+                            <input type="text" name="email" placeholder="Email Address">
+                        </p>
+
+                        <p style="padding: 10px 10px;">
+                            <textarea name="message" rows="10" cols="50" placeholder="Enter Message"></textarea>
+                        </p>
+
+                    <div class="submitbutton">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- javascript implementation -->
+        <script type="text/javascript">
+            function validateForm()
+            {
+                // getting the values from the user and storing them in variables
+                var fName = document.forms["contactUsForm"]["firstName"].value;
+                var lName = document.forms["contactUsForm"]["lastName"].value;
+                var emailAddress = document.forms["contactUsForm"]["email"].value;
+                var messageInfo = document.forms["contactUsForm"]["message"].value;
+
+                // if statement is used for form validation to check which values the user has not entered 
+                if(fName=="" && lName=="" && emailAddress=="" && messageInfo=="")
+                {
+                    alert("Please enter all the values!");//content for pop up message
+                }
+                else if(fName=="" && lName=="" && emailAddress=="")
+                {
+                    alert("Please enter first name, last name and email address!");
+                }
+                else if(fName=="" && lName=="" && messageInfo=="")
+                {
+                    alert("Please enter the first name, last name and message!");
+                }
+                else if(fName=="" && emailAddress=="" && messageInfo=="")
+                {
+                    alert("Please enter the first name, email address and message!");
+                }
+                else if(lName=="" && emailAddress=="" && messageInfo=="")
+                {
+                    alert("Please enter the last name, email address and message!");
+                }
+                else if(fName=="" && lName=="")
+                {
+                    alert("Please enter the first name and last name!");
+                }
+                else if(fName=="" && emailAddress=="")
+                {
+                    alert("Please enter the first name and email address!");
+                }
+                else if(fName=="" && messageInfo=="")
+                {
+                    alert("Please enter the first name and message!");
+                }
+                else if(lName=="" && emailAddress=="")
+                {
+                    alert("Please enter the last name and email address!");
+                }
+                else if(lName=="" && messageInfo=="")
+                {
+                    alert("Please enter the last name and message!");
+                }
+                else if(emailAddress=="" && messageInfo=="")
+                {
+                    alert("Please enter the email address and message!");
+                }
+                else if(fName=="")
+                {
+                    alert("Please enter the first name!");
+                }
+                else if(lName=="")
+                {
+                    alert("Please enter the last name!");
+                }
+                else if(emailAddress=="")
+                {
+                    alert("Please enter the email address!");
+                }
+                else if(messageInfo=="")
+                {
+                    alert("Please enter the message!");
+                }
+                else{
+                    alert("Thank you for contacting us!")
+                }
+                
+            } 
+        </script>
+    </main>
+
+    <footer>
+        <!-- div for the footer -->
+        <div class="footerdiv">
+            <!-- div for the newsletter form -->
+            <div class="newsletter-div">
+                <p>
+                    <h3 style="color: #FACE4D;">Join Our Newsletter</h3><br>
+                    <!-- form for joining the newsletter -->
+                    <form name="joinNewsletter" onsubmit="newsletter()">
+                        <input type="text" name="emailId" placeholder="Email Address">
+                        <br><br>
+                        <input type="submit" value="Join Now">
+                    </form>
+                </p>
+            </div>
+            
+            <!-- div for quick links in footer -->
+            <div class="footerlink-div">
+                <ul>
+                    <h3 style="color: #FACE4D;">Quick Links</h3><br>
+                    <li><a href="../index.html" class="footer-link">Home</a></li>
+                    <li><a href="product.html" class="footer-link">Products</a></li>
+                    <li><a href="aboutus.html" class="footer-link">About Us</a></li>
+                    <li><a href="research.html" class="footer-link">Research</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                </ul>    
+            </div>
+            
+            <!-- div for address information in footer -->
+            <div class="address-div">
+                <h3 style="color: #FACE4D;">Address</h3><br>
+                <p>Islington College, Kamalpokhari<br>Kathmandu, Nepal<br>01-5970012, 9801042242<br>info@team1.com.np</p>
+            </div>
+
+            <!-- div for social media links in footer -->
+            <div class="followus-div">
+                <h3 style="color: #FACE4D;">Follow us</h3>
+                <!-- div for the social media icons -->
+                <div class="sns-icons">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank">
+                        <img src="../images/facebook.png" alt="f" height="50px" width="50px">
+                    </a>
+                    <a href="https://www.google.com/" class="fa fa-google" target="_blank">
+                        <img src="../images/google.png" alt="g" height="50px" width="50px">
+                    </a>
+                    <a href="https://twitter.com/" class="fa fa-twitter" target="_blank">
+                        <img src="../images/twitter.png" alt="t" height="50px" width="50px">
+                    </a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank">
+                        <img src="../images/instagram.png" alt="i" height="50px" width="50px">
+                    </a>               
+                </div>        
+
+                <!-- div for copyright -->
+                <div class="copyright">
+                    <h5 style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter;">&copy; Copyright 2023 Islington College</h5>
+                </div>
+        </div>
+
+
+        <!-- javascript for pop up message while joining newsletter -->
+        <script type="text/javascript">
+            function newsletter(){
+                //getting the value of email from user and storing it in a variable
+                var news = document.forms["joinNewsletter"]["emailId"].value
+                //checking if email address is empty or not and alerting accordingly
+                if(news=="")
+                {
+                    alert("Please enter your email address to join our newsletter!");
+                }
+                else
+                {
+                    alert("You have successfully joined our newsletter!");
+                }
+            }
+        </script>
+    </footer>
+</body>
+</html>

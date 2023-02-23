@@ -1,0 +1,215 @@
+/* importing local font */
+@font-face{
+    font-family: fraunces;
+    src: url(Fraunces_9pt-SemiBold.ttf);
+
+}
+
+/* assigning font family for the entire body */
+*{
+    font-family: fraunces;
+}
+
+/* styling the wrapper div */
+.maindiv{
+    background-color: #b2cdbc;
+    width: 100%; 
+    height:700px;
+
+}
+
+/* style and position of the navigation bar */
+.header{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100px;
+}
+
+/* size of the logo */
+.logo{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+/* sizing of left portion of navigation bar */
+.navleft{
+    width: 45%;
+    margin-top: 10px;
+    height: 80px;
+    float: left;
+}
+
+/* sizing of right side of navigation bar */
+.navright{
+    width: 45%;
+    margin-top: 10px;
+    height: 80px;
+    float: right;
+}
+
+/* styling of the list items of the nav bar */
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+/* styling of the links of the nav bar */
+nav ul li a{
+    text-decoration: none;
+    color: #004921;
+    padding: 10px 15px;
+    border-radius: 25px 25px;
+}
+
+/* hover effect of the link of nav bar */
+.navlink:hover{
+    background-color: #004921;
+    color: #FACE4D;
+}
+
+/* visited effect of link of nav bar */
+.navlink:visited{
+    background-color: #004921;
+}
+
+/* styling for the search button */
+.search{
+    border-radius: 25px 25px;
+    color: #004921;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+    background-color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    cursor: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 280px;
+}
+
+/* style and position of footer div */
+.footerdiv{
+    background-color: #004921;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+}
+
+/* size of section inside the footer */
+.newsletter-div, .footerlink-div, .address-div, .followus-div{
+    width: 350px;
+    float: left;
+}
+
+/* size and position of newsletter */
+.newsletter-div{
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* styling of the form fields */
+input[type=text][name=newsletter]{
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px 5px;
+    border-style: none;
+}
+
+/* styling of the submit button  */
+button[type=submit][value=joinbutton]{
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px 5px;
+    border-style: none;
+    color: #ffffff;  
+}
+
+button{
+    background-color: #FACE4D;
+}
+
+/* hover effect of the button */
+button:hover{
+    background-color: #E6BA16;
+}
+
+/* position of quick links of footer */
+.footerlink-div{
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 0px;
+}
+
+/* styling of quick links of footer */
+.footer-link{
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+/* hover effect of quick links */
+.footer-link:hover{
+    opacity: 1;
+    padding-left: 5px;
+    transition: 50ms;
+}
+
+/* styling list items of quick links */
+.footerlink-div ul li{
+    list-style-type: none;
+}
+
+/* position of address section of footer */
+.address-div{
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* styling of address content */
+.address-div p{
+    color: #ffffff;
+    opacity: 0.5;
+    font-size: smaller;
+}
+
+/* hover effect of address content */
+.address-div p:hover{
+    opacity: 1;
+    transition: 50ms;
+}
+
+/* position of social media section */
+.followus-div{
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* position of social media icons */
+.sns-icons{
+    margin-top: 15px;
+}
+
+/* hover effect of social media icons */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* styling of icons */
+.fa-facebook, .fa-google, .fa-twitter, .fa-instagram{
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* styling of copyright section in footer */
+.copyright{
+    color: #ffffff;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+
+
